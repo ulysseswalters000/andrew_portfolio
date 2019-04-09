@@ -3,6 +3,7 @@
     Navbar
     Carousel
     AboutBlurb
+    Projects
     Footer
 </template>
 
@@ -11,6 +12,7 @@
 import Navbar from "@/components/Navbar";
 import Carousel from "@/components/Carousel";
 import AboutBlurb from "@/components/AboutBlurb";
+import Projects from "@/components/Projects";
 import Footer from "@/components/Footer";
 
 export default {
@@ -19,6 +21,7 @@ export default {
     Navbar,
     Carousel,
     AboutBlurb,
+    Projects,
     Footer
   }
 };

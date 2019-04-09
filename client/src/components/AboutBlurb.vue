@@ -3,12 +3,12 @@
     b-container.bg-info(fluid)
       b-container.pt-4.text-white
         h1.text-center.text-uppercase Meet Me
-        b-row.mt-4
+        b-row.mt-4.py-4
           b-col.mt-4(cols="12" md="6")
             b-img(thumbnail rounded="circle" src="../assets/images/headshot.png")
           b-col.mt-4(cols="12" md="6")
             h2.text-center.text-uppercase What I do
-            b-nav.bg-dark(fill)
+            b-nav.bg-secondary(fill)
               b-nav-item(@click="webDesign")
                 p.text-light.mb-0 Web Design
               b-nav-item(@click="seo")
@@ -23,6 +23,8 @@
               b-card-title {{ services.title }}
               b-card-sub-title {{ services.subTitle }}
               b-card-body {{ services.serviceData }}
+        b-container.text-center.py-4.mt-4
+          b-button(size="lg" @click="contact") Contact
 </template>
 
 <script>
@@ -67,6 +69,9 @@ export default {
                                    in the current digital world. I have ghost written
                                    many articles for my clients that have helped expand their
                                    client base and brought them more prosperity.`
+    },
+    contact() {
+      this.$router.push('/contact')
     }
   }
 }
