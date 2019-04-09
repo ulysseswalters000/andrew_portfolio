@@ -1,16 +1,22 @@
 <template lang="pug">
-  div
-    nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
-      router-link.navbar-brand(to="/") AW
-      button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent")
-        span.navbar-toggler-icon
-      div#navbarContent.collapse.navbar-collapse
-        div.navbar-nav.ml-auto
-          router-link.nav-item.nav-link(to="/") Home
-            span.sr-only (current)
-          router-link.nav-item.nav-link(to="/About") About
-          router-link.nav-item.nav-link(to="/Contact") Contact
-          router-link.nav-item.nav-link(to="/Portfolio") Portfolio
+  div.fixed-top
+    nav
+      b-navbar(toggleable="lg" type="dark" variant="dark")
+        b-navbar-brand(href="/") AW
+        
+        b-navbar-toggle(target="nav-collapse")
+        
+        b-collapse#nav-collapse(is-nav)
+          b-navbar-nav.ml-auto.color
+            b-navbar-item
+              router-link.p-2.d-block.link-style(to="/") Home
+            b-navbar-item
+              router-link.p-2.d-block.link-style(to="/about") About
+            b-navbar-item
+              router-link.p-2.d-block.link-style(to="/contact") Contact
+            b-navbar-item
+              router-link.p-2.d-block.link-style(to="/portfolio") Portfolio
+    
 
 
 </template>
@@ -18,12 +24,21 @@
 <script>
 export default {
   name: "Navbar"
-}
+};
 </script>
 
 <style lang="scss" scoped>
-a {
-
+.color {
+  color: #fff;
 }
 
+.link-style {
+  text-decoration: none;
+  color: #fff;
+
+  &:hover {
+    background-color: #444;
+    color: #000;
+  }
+}
 </style>

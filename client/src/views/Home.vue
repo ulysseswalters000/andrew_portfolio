@@ -1,20 +1,25 @@
 <template lang="pug">
   div.home
     Navbar
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-  </div>
+    Carousel
+    AboutBlurb
+    Footer
 </template>
 
 <script>
 // @ is an alias to /src
-import Navbar from "@/components/Navbar.vue";
-import HelloWorld from "@/components/HelloWorld.vue";
+import Navbar from "@/components/Navbar";
+import Carousel from "@/components/Carousel";
+import AboutBlurb from "@/components/AboutBlurb";
+import Footer from "@/components/Footer";
 
 export default {
   name: "home",
   components: {
     Navbar,
-    HelloWorld
+    Carousel,
+    AboutBlurb,
+    Footer
   }
 };
 </script>
